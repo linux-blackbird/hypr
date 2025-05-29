@@ -1,10 +1,12 @@
-pkgname=hyprwm
+# Maintainer: Al Muhdil Karim <caleb@alerque.com>
+
+pkgname=chypr
 pkgver=0.0.1
 pkgrel=1
 arch=(x86_64)
 url='https://github.com/linux-blackbird/hyprwm'
 pkgdesc="blackbird hyprland config"
-license=('MIT License')
+license=('MIT-License')
 groups=()
 depends=(hyprland)
 makedepends=()
@@ -24,6 +26,4 @@ package(){
 
     install -D -m644 $srcdir/etc/hyprland.conf $pkgdir/etc/skel/.config/hypr/
     install -D -m755 $srcdir/img/* $pkgdir/usr/share/hypr/
-
-    
 }
