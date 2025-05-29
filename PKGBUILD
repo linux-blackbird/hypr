@@ -8,7 +8,9 @@ url='https://github.com/linux-blackbird/hyprwm'
 pkgdesc="blackbird hyprland config"
 license=('MIT-License')
 groups=()
-depends=(hyprland)
+depends=(hyprland
+         hyprlock
+         hypridle)
 makedepends=()
 optdepends=()
 source=()
