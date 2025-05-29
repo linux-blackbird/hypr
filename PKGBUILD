@@ -14,7 +14,7 @@ depends=(hyprland
 makedepends=()
 optdepends=()
 source=()
-sha256sums=('SKIP')
+sha256sums=(SKIP)
 
 package(){
 
