@@ -14,18 +14,18 @@ depends=(hyprland
 makedepends=()
 optdepends=()
 source=()
-sha256sums=(SKIP)
+#sha256sums=(SKIP)
 
 package(){
 
-    if [ ! -d $pkgdir/usr/share/hypr ];then
-        mkdir -p $pkgdir/usr/share/hypr
+    if [ ! -d /usr/share/hypr ];then
+        mkdir -p /usr/share/hypr
     fi
 
-    if [ ! -d $pkgdir/etc/skel/.config/hypr/ ];then
-        mkdir -p $pkgdir/etc/skel/.config/hypr/
+    if [ ! -d /etc/skel/.config/hypr/ ];then
+        mkdir -p /etc/skel/.config/hypr/
     fi
 
-    install -D -m644 $srcdir/etc/hyprland.conf $pkgdir/etc/skel/.config/hypr/
-    install -D -m755 $srcdir/img/* $pkgdir/usr/share/hypr/
+    install -D -m644 $srcdir/etc/hyprland.conf /etc/skel/.config/hypr/
+    install -D -m755 $srcdir/img/* /usr/share/hypr/
 }
