@@ -1,10 +1,10 @@
 # Maintainer: Al Muhdil Karim <caleb@alerque.com>
 
-pkgname=hyprwm
+pkgname=hyprdev
 pkgver=0.0.1
 pkgrel=1
 arch=(x86_64)
-url='https://github.com/linux-blackbird/hyprwm'
+url='https://github.com/linux-blackbird/hyprdev'
 pkgdesc="blackbird hyprland config"
 license=('MIT-License')
 groups=()
