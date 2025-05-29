@@ -18,14 +18,14 @@ source=()
 
 package(){
 
-    if [ ! -d /usr/share/hypr ];then
-        mkdir -p /usr/share/hypr
+    if [ ! -d $pkgdir/usr/share/hypr ];then
+        mkdir -p $pkgdir/usr/share/hypr
     fi
 
-    if [ ! -d /etc/skel/.config/hypr/ ];then
-        mkdir -p /etc/skel/.config/hypr/
+    if [ ! -d $pkgdir/etc/skel/.config/hypr/ ];then
+        mkdir -p $pkgdir/etc/skel/.config/hypr/
     fi
 
-    install -D -m644 pkg/etc/hyprland.conf /etc/skel/.config/hypr/
-    install -D -m755 pkg/img/* /usr/share/hypr/
+    install -D -m644 $srcdir/etc/hyprland.conf $pkgdir/etc/skel/.config/hypr/
+    install -D -m755 $srcdir/img/* $pkgdir/usr/share/hypr/
 }
