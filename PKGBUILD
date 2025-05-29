@@ -1,6 +1,6 @@
 # Maintainer: Al Muhdil Karim <caleb@alerque.com>
 
-pkgname=chypr
+pkgname=hyprwm
 pkgver=0.0.1
 pkgrel=1
 arch=(x86_64)
@@ -23,7 +23,7 @@ package(){
     fi
 
     if [ ! -d $pkgdir/etc/skel/.config/hypr/ ];then
-         mkdir -p $pkgdir/etc/skel/.config/hypr/
+        mkdir -p $pkgdir/etc/skel/.config/hypr/
     fi
 
     install -D -m644 $srcdir/etc/hyprland.conf $pkgdir/etc/skel/.config/hypr/
