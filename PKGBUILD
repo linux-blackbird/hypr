@@ -26,6 +26,6 @@ package(){
         mkdir -p /etc/skel/.config/hypr/
     fi
 
-    install -D -m644 $srcdir/etc/hyprland.conf /etc/skel/.config/hypr/
-    install -D -m755 $srcdir/img/* /usr/share/hypr/
+    install -D -m644 $pgkdir/etc/hyprland.conf /etc/skel/.config/hypr/
+    install -D -m755 $pgkdir/img/* /usr/share/hypr/
 }
