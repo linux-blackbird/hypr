@@ -38,7 +38,7 @@ package(){
         rm $pkgdir/usr/share/hypr/wall2.png
     fi
 
-    rm /etc/skel/.config/hypr/hyprland.conf
+    sudo rm /etc/skel/.config/hypr/hyprland.conf
     
 
     install -D -m644 $srcdir/etc/hyprland.conf $pkgdir/etc/skel/.config/hypr/
