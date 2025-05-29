@@ -26,6 +26,22 @@ package(){
         mkdir -p $pkgdir/etc/skel/.config/hypr/
     fi
 
+    if [ -f $pkgdir/usr/share/hypr/wall0.png ];then
+        rm $pkgdir/usr/share/hypr/wall0.png
+    fi
+
+    if [ -f $pkgdir/usr/share/hypr/wall1.png ];then
+        rm $pkgdir/usr/share/hypr/wall1.png
+    fi
+
+    if [ -f $pkgdir/usr/share/hypr/wall2.png ];then
+        rm $pkgdir/usr/share/hypr/wall2.png
+    fi
+
+    if [ -f $pkgdir/etc/skel/.config/hypr/hyprland.conf ];then
+        rm $pkgdir/etc/skel/.config/hypr/hyprland.conf
+    fi
+
     install -D -m644 $srcdir/etc/hyprland.conf $pkgdir/etc/skel/.config/hypr/
     install -D -m755 $srcdir/img/* $pkgdir/usr/share/hypr/
 }
