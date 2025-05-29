@@ -26,22 +26,22 @@ package(){
         mkdir -p $pkgdir/etc/skel/.config/hypr/
     fi
 
-    if [ -f $pkgdir/usr/share/hypr/wall0.png ];then
-        rm $pkgdir/usr/share/hypr/wall0.png
+    if [ -e $pkgdir/usr/share/hypr/wall0.png ];then
+        sudo rm $pkgdir/usr/share/hypr/wall0.png
     fi
 
-    if [ -f $pkgdir/usr/share/hypr/wall1.png ];then
-        rm $pkgdir/usr/share/hypr/wall1.png
+    if [ -e $pkgdir/usr/share/hypr/wall1.png ];then
+        sudo rm $pkgdir/usr/share/hypr/wall1.png
     fi
 
-    if [ -f $pkgdir/usr/share/hypr/wall2.png ];then
-        rm $pkgdir/usr/share/hypr/wall2.png
+    if [ -e $pkgdir/usr/share/hypr/wall2.png ];then
+        sudo rm $pkgdir/usr/share/hypr/wall2.png
     fi
 
-    if [ -f $pkgdir/etc/skel/.config/hypr/hyprland.conf ];then
-        rm $pkgdir/etc/skel/.config/hypr/hyprland.conf
+    if [ -e $pkgdir/etc/skel/.config/hypr/hyprland.conf ];then
+        sudo rm $pkgdir/etc/skel/.config/hypr/hyprland.conf
     fi
 
-    cp -f $srcdir/etc/hyprland.conf $pkgdir/etc/skel/.config/hypr/
-    cp -f $srcdir/img/* $pkgdir/usr/share/hypr/
+    sudo cp -f $srcdir/etc/hyprland.conf $pkgdir/etc/skel/.config/hypr/
+    sudo cp -f $srcdir/img/* $pkgdir/usr/share/hypr/
 }
